@@ -14,3 +14,7 @@
       shell: python3 data_dispatcher.py
       args:
         chdir: /home/pi/public_html/lightmanager/publications/dispatcher
+    - name: Restart nginx
+      service:
+        name: nginx
+        state: restarted
