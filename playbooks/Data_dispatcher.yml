@@ -1,5 +1,3 @@
-THis is the my First project
-Git Learning
 ---
 - hosts: webservers
   become: true
