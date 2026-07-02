@@ -1,18 +1,2 @@
 THis is the my First project
 Git Learning
----
-- hosts: webservers
-  become: true
-  gather_facts: no
-
-  tasks:
-
-    - name: Kill existing data_dispatcher process if running
-      shell: |
-        ps aux | grep -i data_dispatcher | grep -v grep | awk '{print $2}' | xargs -r sudo kill -9
-      ignore_errors: yes
-
-    - name: Run Data Dispatcher
-      shell: python3 data_dispatcher.py
-      args:
-        chdir: /home/pi/public_html/lightmanager/publications/dispatcher
